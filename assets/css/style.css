@@ -55,6 +55,10 @@ header.scrolled {
     align-items: center;
 }
 
+.header-container img{
+    width: 25%;
+}
+
 .logo {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 700;
