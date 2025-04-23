@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos | Cabinet d'Architecture</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap">
     <style>
         /* CSS Reset et base */
         * {
@@ -12,7 +14,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Open Sans', sans-serif;
             color: #2F2F2F;
@@ -20,25 +22,28 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4 {
+
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         img {
             max-width: 100%;
             height: auto;
             display: block;
         }
-        
+
         /* Header */
         header {
             background-color: #F8F5F2;
@@ -46,26 +51,26 @@
             position: fixed;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
         }
-        
+
         header.scrolled {
             padding: 10px 0;
             background-color: rgba(248, 245, 242, 0.95);
         }
-        
+
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .header-container img{
+        .header-container img {
             width: 50%;
         }
 
-        
+
         .logo {
             font-size: clamp(1.2rem, 3vw, 1.5rem);
             font-weight: 700;
@@ -74,12 +79,12 @@
             display: flex;
             align-items: center;
         }
-        
+
         .logo span {
             color: #E07A5F;
             margin-left: 5px;
         }
-        
+
         /* Menu Burger */
         .menu-toggle {
             display: none;
@@ -87,7 +92,7 @@
             padding: 10px;
             z-index: 1001;
         }
-        
+
         .menu-toggle span {
             display: block;
             width: 25px;
@@ -96,32 +101,32 @@
             margin: 5px 0;
             transition: all 0.3s;
         }
-        
+
         .menu-toggle.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }
-        
+
         .menu-toggle.active span:nth-child(2) {
             opacity: 0;
         }
-        
+
         .menu-toggle.active span:nth-child(3) {
             transform: rotate(-45deg) translate(7px, -6px);
         }
-        
+
         nav {
             transition: all 0.3s;
         }
-        
+
         nav ul {
             display: flex;
             list-style: none;
         }
-        
+
         nav ul li {
             margin-left: clamp(15px, 2vw, 25px);
         }
-        
+
         nav ul li a {
             text-decoration: none;
             color: #2F2F2F;
@@ -130,7 +135,7 @@
             transition: color 0.3s;
             position: relative;
         }
-        
+
         nav ul li a:after {
             content: '';
             position: absolute;
@@ -141,58 +146,58 @@
             left: 0;
             transition: width 0.3s;
         }
-        
+
         nav ul li a:hover:after,
         nav ul li a.active:after {
             width: 100%;
         }
-        
+
         nav ul li a:hover {
             color: #E07A5F;
         }
-        
+
         /* Hero About */
         .about-hero {
             height: 60vh;
             min-height: 400px;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             display: flex;
             align-items: center;
             text-align: center;
             color: white;
             padding-top: 80px;
         }
-        
+
         .about-hero-content {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
             animation: fadeInUp 1s ease-out;
         }
-        
+
         .about-hero h1 {
             font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 20px;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
-        
+
         .about-hero p {
             font-size: clamp(1rem, 2vw, 1.2rem);
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
-        
+
         /* About Main */
         .about-main {
             padding: 80px 0;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 60px;
             font-size: clamp(1.8rem, 4vw, 2.5rem);
             position: relative;
         }
-        
+
         .section-title:after {
             content: '';
             display: block;
@@ -201,147 +206,147 @@
             background-color: #E07A5F;
             margin: 20px auto;
         }
-        
+
         /* Histoire */
         .history {
             margin-bottom: 100px;
         }
-        
+
         .history-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 50px;
             align-items: center;
         }
-        
+
         .history-text {
             padding: 20px;
         }
-        
+
         .history-text h2 {
             font-size: clamp(1.4rem, 3vw, 1.8rem);
             margin-bottom: 20px;
             color: #2F2F2F;
         }
-        
+
         .history-text p {
             margin-bottom: 20px;
             color: #555;
         }
-        
+
         .history-image {
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             position: relative;
         }
-        
+
         .history-image img {
             transition: transform 0.5s;
         }
-        
+
         .history-image:hover img {
             transform: scale(1.05);
         }
-        
+
         /* Approche */
         .approach {
             margin-bottom: 100px;
         }
-        
+
         .approach-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
+
         .approach-card {
             background-color: white;
             padding: 40px 30px;
             border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s;
             text-align: center;
         }
-        
+
         .approach-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .approach-icon {
             font-size: 3rem;
             color: #E07A5F;
             margin-bottom: 20px;
         }
-        
+
         .approach-card h3 {
             margin-bottom: 15px;
             font-size: 1.4rem;
         }
-        
+
         /* Équipe */
         .team {
             margin-bottom: 100px;
         }
-        
+
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
-        
+
         .team-member {
             background-color: white;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.3s;
             text-align: center;
         }
-        
+
         .team-member:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .member-image {
             height: 300px;
             overflow: hidden;
         }
-        
+
         .member-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
-        
+
         .team-member:hover .member-image img {
             transform: scale(1.1);
         }
-        
+
         .member-info {
             padding: 25px 20px;
         }
-        
+
         .member-info h3 {
             font-size: 1.3rem;
             margin-bottom: 5px;
         }
-        
+
         .member-info p {
             color: #E07A5F;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 15px;
         }
-        
+
         .social-links a {
             display: flex;
             align-items: center;
@@ -354,46 +359,46 @@
             transition: all 0.3s;
             text-decoration: none;
         }
-        
+
         .social-links a:hover {
             background-color: #E07A5F;
             color: white;
         }
-        
+
         /* Valeurs */
         .values {
             margin-bottom: 100px;
         }
-        
+
         .values-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 50px;
             align-items: center;
         }
-        
+
         .values-image {
             order: 2;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .values-text {
             order: 1;
             padding: 20px;
         }
-        
+
         .values-list {
             list-style: none;
         }
-        
+
         .values-list li {
             margin-bottom: 25px;
             position: relative;
             padding-left: 40px;
         }
-        
+
         .values-list li:before {
             content: '';
             position: absolute;
@@ -404,7 +409,7 @@
             background-color: rgba(224, 122, 95, 0.2);
             border-radius: 50%;
         }
-        
+
         .values-list li:after {
             content: '✓';
             position: absolute;
@@ -413,24 +418,24 @@
             color: #E07A5F;
             font-weight: bold;
         }
-        
+
         .values-list h3 {
             font-size: 1.2rem;
             margin-bottom: 10px;
         }
-        
+
         /* Clients */
         .clients {
             margin-bottom: 80px;
         }
-        
+
         .clients-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 30px;
             align-items: center;
         }
-        
+
         .client-logo {
             filter: grayscale(100%);
             opacity: 0.7;
@@ -440,17 +445,17 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .client-logo:hover {
             filter: grayscale(0%);
             opacity: 1;
         }
-        
+
         .client-logo img {
             max-height: 60px;
             width: auto;
         }
-        
+
         /* CTA */
         .about-cta {
             padding: 80px 0;
@@ -458,12 +463,12 @@
             color: white;
             text-align: center;
         }
-        
+
         .about-cta h2 {
             font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin-bottom: 30px;
         }
-        
+
         .btn {
             display: inline-block;
             background-color: white;
@@ -477,36 +482,36 @@
             border: 2px solid transparent;
             cursor: pointer;
         }
-        
+
         .btn:hover {
             background-color: transparent;
             border-color: white;
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         /* Footer */
         footer {
             background-color: #2F2F2F;
             color: white;
             padding: 80px 0 30px;
         }
-        
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
             margin-bottom: 60px;
         }
-        
+
         .footer-column h3 {
             font-size: 1.3rem;
             margin-bottom: 25px;
             position: relative;
             padding-bottom: 10px;
         }
-        
+
         .footer-column h3:after {
             content: '';
             position: absolute;
@@ -516,19 +521,20 @@
             height: 2px;
             background-color: #E07A5F;
         }
-        
-        .footer-column p, .footer-column a {
+
+        .footer-column p,
+        .footer-column a {
             color: #E0E0E0;
             margin-bottom: 15px;
             display: block;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .footer-column a:hover {
             color: #E07A5F;
         }
-        
+
         .copyright {
             text-align: center;
             padding-top: 30px;
@@ -536,32 +542,34 @@
             color: #999;
             font-size: 0.9rem;
         }
-        
+
         /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         /* Responsive Styles */
         @media (max-width: 992px) {
+
             .history-content,
             .values-content {
                 gap: 30px;
             }
         }
-        
+
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
             }
-            
+
             nav {
                 position: fixed;
                 top: 0;
@@ -569,71 +577,73 @@
                 width: 80%;
                 max-width: 300px;
                 background-color: #F8F5F2;
-                box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
                 transition: left 0.3s;
                 height: 100vh;
                 z-index: 999;
                 padding-top: 80px;
             }
-            
+
             nav.active {
                 left: 0;
             }
-            
+
             nav ul {
                 flex-direction: column;
                 padding: 20px;
             }
-            
+
             nav ul li {
                 margin: 15px 0;
             }
-            
+
             .about-hero {
                 height: 50vh;
             }
-            
+
             .values-image {
                 order: 1;
             }
-            
+
             .values-text {
                 order: 2;
             }
         }
-        
+
         @media (max-width: 576px) {
             .container {
                 padding: 0 15px;
             }
-            
+
             .about-hero {
                 min-height: 350px;
                 padding-top: 70px;
             }
-            
+
             .section-title {
                 margin-bottom: 40px;
             }
-            
+
             .history-image,
             .values-image {
                 height: 250px;
             }
-            
+
             .member-image {
                 height: 250px;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <!-- <a href="index.html" class="logo">
                 <img src="./assets/imgs/logo-v2.png" alt="Moderne Construction" srcset="Moderne Construction">
-            </a>
+            </a> -->
+            <a href="index.html" class="logo">MODERNE<span>CONSTRUCTION</span></a>
             <div class="menu-toggle">
                 <span></span>
                 <span></span>
@@ -668,12 +678,19 @@
                 <div class="history-content">
                     <div class="history-text">
                         <h2>15 ans d'excellence architecturale</h2>
-                        <p>Fondé en 2008 par Jean Dupont, diplômé de l'École Nationale Supérieure d'Architecture de Paris, notre cabinet s'est rapidement imposé comme une référence dans le domaine de l'architecture contemporaine.</p>
-                        <p>Ce qui a commencé comme une petite agence familiale est devenu au fil des années un cabinet réputé, collaborant avec des clients prestigieux et réalisant des projets primés à travers toute la France.</p>
-                        <p>Notre croissance organique nous a permis de préserver nos valeurs fondamentales tout en développant une expertise pointue dans divers domaines de l'architecture et de l'urbanisme.</p>
+                        <p>Fondé en 2008 par Jean Dupont, diplômé de l'École Nationale Supérieure d'Architecture de
+                            Paris, notre cabinet s'est rapidement imposé comme une référence dans le domaine de
+                            l'architecture contemporaine.</p>
+                        <p>Ce qui a commencé comme une petite agence familiale est devenu au fil des années un cabinet
+                            réputé, collaborant avec des clients prestigieux et réalisant des projets primés à travers
+                            toute la France.</p>
+                        <p>Notre croissance organique nous a permis de préserver nos valeurs fondamentales tout en
+                            développant une expertise pointue dans divers domaines de l'architecture et de l'urbanisme.
+                        </p>
                     </div>
                     <div class="history-image">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Fondation du cabinet">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Fondation du cabinet">
                     </div>
                 </div>
             </section>
@@ -685,17 +702,20 @@
                     <div class="approach-card">
                         <div class="approach-icon">✏️</div>
                         <h3>Design sur mesure</h3>
-                        <p>Chaque projet est une création unique, parfaitement adaptée à son environnement et aux besoins spécifiques de nos clients.</p>
+                        <p>Chaque projet est une création unique, parfaitement adaptée à son environnement et aux
+                            besoins spécifiques de nos clients.</p>
                     </div>
                     <div class="approach-card">
                         <div class="approach-icon">🌱</div>
                         <h3>Éco-responsabilité</h3>
-                        <p>Nous intégrons systématiquement des solutions durables et des matériaux écologiques dans nos réalisations.</p>
+                        <p>Nous intégrons systématiquement des solutions durables et des matériaux écologiques dans nos
+                            réalisations.</p>
                     </div>
                     <div class="approach-card">
                         <div class="approach-icon">🤝</div>
                         <h3>Collaboration</h3>
-                        <p>Nous travaillons en étroite collaboration avec nos clients à chaque étape du processus créatif.</p>
+                        <p>Nous travaillons en étroite collaboration avec nos clients à chaque étape du processus
+                            créatif.</p>
                     </div>
                 </div>
             </section>
@@ -706,7 +726,8 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="https://cdn.pixabay.com/photo/2016/04/01/11/25/avatar-1300331_960_720.png" alt="Jean Dupont">
+                            <img src="https://cdn.pixabay.com/photo/2016/04/01/11/25/avatar-1300331_960_720.png"
+                                alt="Jean Dupont">
                         </div>
                         <div class="member-info">
                             <h3>Mamadou NGOM</h3>
@@ -732,7 +753,8 @@
                     </div> -->
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="https://cdn.pixabay.com/photo/2016/04/01/11/25/avatar-1300331_960_720.png" alt="Thomas Martin">
+                            <img src="https://cdn.pixabay.com/photo/2016/04/01/11/25/avatar-1300331_960_720.png"
+                                alt="Thomas Martin">
                         </div>
                         <div class="member-info">
                             <h3>Issakha</h3>
@@ -764,25 +786,30 @@
                 <h2 class="section-title">Nos valeurs</h2>
                 <div class="values-content">
                     <div class="values-image">
-                        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nos valeurs">
+                        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Nos valeurs">
                     </div>
                     <div class="values-text">
                         <ul class="values-list">
                             <li>
                                 <h3>Créativité</h3>
-                                <p>Nous repoussons les limites du design tout en respectant les contraintes fonctionnelles et budgétaires.</p>
+                                <p>Nous repoussons les limites du design tout en respectant les contraintes
+                                    fonctionnelles et budgétaires.</p>
                             </li>
                             <li>
                                 <h3>Exigence</h3>
-                                <p>Chaque détail compte dans nos réalisations, de la conception à la livraison finale.</p>
+                                <p>Chaque détail compte dans nos réalisations, de la conception à la livraison finale.
+                                </p>
                             </li>
                             <li>
                                 <h3>Transparence</h3>
-                                <p>Nous établissons des relations de confiance avec nos clients grâce à une communication claire et honnête.</p>
+                                <p>Nous établissons des relations de confiance avec nos clients grâce à une
+                                    communication claire et honnête.</p>
                             </li>
                             <li>
                                 <h3>Innovation</h3>
-                                <p>Nous intégrons les dernières technologies et tendances pour des projets résolument modernes.</p>
+                                <p>Nous intégrons les dernières technologies et tendances pour des projets résolument
+                                    modernes.</p>
                             </li>
                         </ul>
                     </div>
@@ -861,13 +888,13 @@
         const menuToggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('nav');
         const body = document.body;
-        
+
         menuToggle.addEventListener('click', () => {
             nav.classList.toggle('active');
             menuToggle.classList.toggle('active');
             body.classList.toggle('no-scroll');
         });
-        
+
         // Fermer le menu quand on clique sur un lien
         const navLinks = document.querySelectorAll('nav ul li a');
         navLinks.forEach(link => {
@@ -877,7 +904,7 @@
                 body.classList.remove('no-scroll');
             });
         });
-        
+
         // Changement de couleur du header au scroll
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
@@ -887,22 +914,22 @@
                 header.classList.remove('scrolled');
             }
         });
-        
+
         // Animation au défilement
         const animateOnScroll = () => {
             const elements = document.querySelectorAll('.history-content, .approach-card, .team-member, .values-content, .clients-grid');
-            
+
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
                 const screenPosition = window.innerHeight / 1.2;
-                
+
                 if (elementPosition < screenPosition) {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
                 }
             });
         };
-        
+
         // Initialiser les éléments comme invisibles
         document.addEventListener('DOMContentLoaded', () => {
             const elements = document.querySelectorAll('.history-content, .approach-card, .team-member, .values-content, .clients-grid');
@@ -911,15 +938,16 @@
                 element.style.transform = 'translateY(20px)';
                 element.style.transition = 'all 0.5s ease-out';
             });
-            
+
             // Démarrer l'animation pour le hero
             document.querySelector('.about-hero-content').style.opacity = '1';
         });
-        
+
         window.addEventListener('scroll', animateOnScroll);
-        
+
         // Activer l'animation au chargement pour les éléments visibles
         window.addEventListener('load', animateOnScroll);
     </script>
 </body>
+
 </html>

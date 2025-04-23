@@ -415,6 +415,13 @@ nav ul li a:hover {
     transform: translateY(0);
 }
 
+
+.more-project-bloc{
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
 /* Testimonials Section */
 .testimonials {
     padding: 100px 0;
